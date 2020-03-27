@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CareerProUtilityFramework.Properties" GeneratedClassName="CareerProUtil">
+  <Profiles />
+  <Settings>
+    <Setting Name="LoadLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\data</Value>
+    </Setting>
+    <Setting Name="dbUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">postgres</Value>
+    </Setting>
+    <Setting Name="dbPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ballbearing</Value>
+    </Setting>
+    <Setting Name="dbHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">careerpro1-instance-1.cgmk9ruhyhnz.us-east-1.rds.amazonaws.com</Value>
+    </Setting>
+    <Setting Name="port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5432</Value>
+    </Setting>
+    <Setting Name="dbName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">workflow</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
