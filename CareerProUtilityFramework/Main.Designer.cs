@@ -48,12 +48,12 @@
 			// 
 			this.txtLoadPath.Location = new System.Drawing.Point(257, 42);
 			this.txtLoadPath.Name = "txtLoadPath";
-			this.txtLoadPath.Size = new System.Drawing.Size(235, 22);
+			this.txtLoadPath.Size = new System.Drawing.Size(531, 22);
 			this.txtLoadPath.TabIndex = 1;
 			// 
 			// pbButtonLoad
 			// 
-			this.pbButtonLoad.Location = new System.Drawing.Point(520, 40);
+			this.pbButtonLoad.Location = new System.Drawing.Point(36, 71);
 			this.pbButtonLoad.Name = "pbButtonLoad";
 			this.pbButtonLoad.Size = new System.Drawing.Size(129, 23);
 			this.pbButtonLoad.TabIndex = 2;
@@ -64,7 +64,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(36, 92);
+			this.label1.Location = new System.Drawing.Point(42, 110);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(46, 17);
 			this.label1.TabIndex = 3;
