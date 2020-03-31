@@ -57,8 +57,8 @@ namespace CareerProUtilityFramework
 		private void pbButtonLoad_Click(object sender, EventArgs e)
 		{
 			string[] files = Directory.GetFiles(txtLoadPath.Text, @"*.doc*");
-			using (Microsoft.Office.Interop.Word.Application application = new Microsoft.Office.Interop.Word.Application())
-			{
+			Microsoft.Office.Interop.Word.Application application = new Microsoft.Office.Interop.Word.Application();
+			
 				string connstring = String.Format($"Server={Properties.CareerProUtil.Default.dbHost};Port={Properties.CareerProUtil.Default.port};" +
 					$"User Id={Properties.CareerProUtil.Default.dbUser};Password={Properties.CareerProUtil.Default.dbPass};Database={Properties.CareerProUtil.Default.dbName};");
 				Task<int> t = System.Threading.Tasks.Task.Run(() =>
@@ -167,6 +167,7 @@ namespace CareerProUtilityFramework
 
 								// need to turn document into searchable text
 								var wordContentRange = document.Content;
+
 									var resumeTxt = wordContentRange.Text;
 									var emails = ExtractEmails(resumeTxt);
 									if (emails != null)
@@ -203,6 +204,7 @@ namespace CareerProUtilityFramework
 									continue;
 
 								}
+								
 
 								var lastFile = File.CreateText("LastFile.txt");
 								lastFile.Write(file);
@@ -216,8 +218,9 @@ namespace CareerProUtilityFramework
 				}, token
 					);
 				t.Wait();
+				application.Quit();
 				File.Delete("LastFile.txt");
-			}
+			
 			MessageBox.Show(string.Format($"{t.Result} items loaded"), "info");
 			// Making connection with Npgsql provider
 		}
